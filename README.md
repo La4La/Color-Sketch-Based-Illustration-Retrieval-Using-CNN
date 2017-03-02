@@ -7,7 +7,7 @@ CNNを用いたカラースケッチに基づくイラスト検索
 卒論の時間の関係で,CNNの学習には1000枚のイラスト(dataset from:[nico-opendata](https://nico-opendata.jp/ja/seigadata/index.html))しか使用していません．
   
 検索例
---------  
+----------------
 
 ### クエリスケッチの例1
  <img src="https://github.com/La4La/Color-Sketch-Based-Illustration-Retrieval-Using-CNN/blob/master/user_query/origin_query/userquery01/01.jpg" width="100px">  
