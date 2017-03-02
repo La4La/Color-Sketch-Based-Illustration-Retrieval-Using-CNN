@@ -81,7 +81,7 @@ def read_image2(path, center=False, flip=False):
 import densenet
 
 model = densenet.DenseNet()
-serializers.load_npz('model_iter_11250', model)
+serializers.load_npz('trained_model', model)
 model.to_cpu()
 
 #-------------------------------------------- load vecs --------------------------------------------
