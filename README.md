@@ -1,14 +1,8 @@
-# Color-Sketch-Based-Illustration-Retrieval-Using-CNN
-
-My graduation project.<br>
-<br>
-I made a color sketch based illustration retrieval model by using convolutional neural network.
-
-プロジェクト・タイトル
+CNNを用いたカラースケッチに基づくイラスト検索
 ======================
-ここにプロジェクトの概要を書きます。
-行末にスペースを2つ入れると
-改行されます。
+卒業論文研究です.  
+  
+マウスなどで短時間で大まかに描いたカラースケッチに基づいて、データベースにある同じ構図のキャラクターのイラストを検索するモデルを提案することです。語句による検索のできない構図の指定ができて、検索の精度が上がります。  
  
 段落を分けるには、[空行](http://example.com/) を入れます。
  
