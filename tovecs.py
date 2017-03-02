@@ -2,32 +2,10 @@
 
 from __future__ import print_function
 import argparse
-import datetime
-import json
-import multiprocessing
 import random
-import sys
-import threading
-import time
-
 import cv2
 from PIL import Image
-
-
-import six
-
-from six.moves import queue
-
-import chainer
-import matplotlib.pyplot as plt
 import numpy as np
-import math
-import chainer.functions as F
-import chainer.links as L
-from chainer.links import caffe
-from matplotlib.ticker import * 
-from chainer import serializers
-
 import csv
 
 parser = argparse.ArgumentParser(
