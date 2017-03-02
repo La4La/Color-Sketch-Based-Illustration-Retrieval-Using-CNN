@@ -29,7 +29,7 @@ parser = argparse.ArgumentParser(
     description='Image inspection using chainer')
 parser.add_argument('directory', help='Path to inspection image file')
 parser.add_argument('--model','-m',default='model', help='Path to model file')
-parser.add_argument('--compare','-c',choices=compares.keys(),default='s',help='The way to compare')
+parser.add_argument('--compare','-c',choices=compares.keys(),default='h',help='The way to compare')
 parser.add_argument('--number_type','-n',choices=number_types.keys(),default='b',help='The number type of feature vector')
 args = parser.parse_args()
 
@@ -93,7 +93,9 @@ else:
     
 #-------------------------------------------- prepare --------------------------------------------
 
+# Indices of target illustrations
 target = [67,86,160,146,248,267,348,335,451,407,572,562,622,669,741,783,805,816,922,965]
+# Prepare to count the number which correctly searched
 classNo_CharaCount = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 
                       11:0, 12:0, 13:0, 14:0, 15:0, 16:0, 17:0, 18:0, 19:0, 20:0}
 top3_CharaCount = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 
@@ -102,6 +104,7 @@ top5_CharaCount = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0,
                       11:0, 12:0, 13:0, 14:0, 15:0, 16:0, 17:0, 18:0, 19:0, 20:0}
 top10_CharaCount = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 
                       11:0, 12:0, 13:0, 14:0, 15:0, 16:0, 17:0, 18:0, 19:0, 20:0}
+
 
 dirs = cmd("ls "+"dataset")
 labels = dirs.splitlines()
