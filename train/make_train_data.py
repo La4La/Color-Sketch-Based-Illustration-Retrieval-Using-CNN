@@ -21,7 +21,7 @@ allimages = open('images.txt','w')
 
 classNo=0
 cnt = 0
-#label = labels[classNo]
+
 for label in labels:
 	workdir = pwd+"/"+sys.argv[1]+"/"+label
 	imageFiles = cmd("ls "+workdir+"/*.jpg")
