@@ -6,8 +6,8 @@ import sys
 import subprocess
  
 parser = argparse.ArgumentParser(
-    description='Image inspection using chainer')
-parser.add_argument('directory', help='Path to inspection image file')
+    description='Resize all the images')
+parser.add_argument('directory', help='Path to original image file')
 args = parser.parse_args()
 
 def cmd(cmd):
