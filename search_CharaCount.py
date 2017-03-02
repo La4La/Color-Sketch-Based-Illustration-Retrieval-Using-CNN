@@ -1,18 +1,12 @@
 import argparse
-import json
 import random
-import sys
 import subprocess
-
 import numpy as np
 import pandas as pd
 from scipy.spatial.distance import euclidean, hamming
 from PIL import Image
 import cv2
 
-import chainer
-from matplotlib.ticker import * 
-from chainer import serializers
 
 compares = {
     's': 'Similarity',
