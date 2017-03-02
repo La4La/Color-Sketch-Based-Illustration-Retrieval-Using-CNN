@@ -1,15 +1,8 @@
 import chainer
 import chainer.functions as F
 import chainer.links as L
-from chainer import initializers
 from six import moves
 import numpy as np
-
-import math
-import six
-
-from chainer import Variable
-
 from chainer import cuda
 from chainer import function
 from chainer.utils import type_check
@@ -39,9 +32,9 @@ class MyAccuracy(function.Function):
 
         return xp.asarray(acc),
 
-def myaccuracy(y, t):
-    
+def myaccuracy(y, t):    
     return MyAccuracy()(y, t)
+
 
 class DenseBlock(chainer.Chain):
     def __init__(self, in_ch, growth_rate, n_layer):
@@ -133,6 +126,7 @@ class DenseNet(chainer.Chain):
         chainer.report({'loss': loss, 'accuracy': myaccuracy(h, t)}, self)
         return loss
 
+    # inspecte the label of a image
     def inspection(self, x):
         h = self.conv1(x)
         for i in moves.range(2, self.block + 2):
@@ -146,7 +140,7 @@ class DenseNet(chainer.Chain):
         h = F.sigmoid(h)
         return h
 
-    
+    # extract binary feature vector from a image
     def tovec_binary(self, x):
         h = self.conv1(x)
         for i in moves.range(2, self.block + 2):
@@ -162,6 +156,7 @@ class DenseNet(chainer.Chain):
         h2= np.where(mask, 1, h2)
         return h2
 
+    # extract real number feature vector from a image
     def tovec_real(self, x):
         h = self.conv1(x)
         for i in moves.range(2, self.block + 2):
