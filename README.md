@@ -4,7 +4,7 @@ CNNを用いたカラースケッチに基づくイラスト検索
   
 マウスなどで短時間で大まかに描いたカラースケッチに基づいて,データベースにある同じ構図のキャラクターのイラストを検索するモデルです．語句による検索のできない構図の指定ができて,検索の幅が広がります．  
   
-卒論の時間の関係で，CNNの学習には1000枚のイラスト(dataset from:[nico-opendata]https://nico-opendata.jp/ja/seigadata/index.html)しか使用していません．
+卒論の時間の関係で，CNNの学習には1000枚のイラスト(dataset from:[nico-opendata](https://nico-opendata.jp/ja/seigadata/index.html))しか使用していません．
  
 使い方
 ------
