@@ -125,6 +125,7 @@ class DenseNet(chainer.Chain):
         chainer.report({'loss': loss, 'accuracy': myaccuracy(h, t)}, self)
         return loss
 
+    # inspect the label
     def inspection(self, x):
         h = self.conv1(x)
         for i in moves.range(2, self.block + 2):
@@ -138,7 +139,7 @@ class DenseNet(chainer.Chain):
         h = F.sigmoid(h)
         return h
 
-    
+    # extract feature vectore (binary)
     def tovec_binary(self, x):
         h = self.conv1(x)
         for i in moves.range(2, self.block + 2):
@@ -154,6 +155,7 @@ class DenseNet(chainer.Chain):
         h2= np.where(mask, 1, h2)
         return h2
 
+    # extract feature vectore (real number)
     def tovec_real(self, x):
         h = self.conv1(x)
         for i in moves.range(2, self.block + 2):
