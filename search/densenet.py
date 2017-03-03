@@ -1,18 +1,10 @@
 import chainer
 import chainer.functions as F
-import chainer.links as L
-from chainer import initializers
-from six import moves
 import numpy as np
-
-import math
-import six
-
-from chainer import Variable
-
 from chainer import cuda
 from chainer import function
 from chainer.utils import type_check
+
 
 class MyAccuracy(function.Function):
 
