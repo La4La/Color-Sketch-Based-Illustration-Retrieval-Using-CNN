@@ -26,6 +26,7 @@ CNNを用いたカラースケッチに基づくイラスト検索
 3. 計500枚のクエリスケッチを提案モデルで検索し，目標イラストがTOP3（またはTOP5、TOP10）に入っていましたら「正解」とカウントする． 
 4. 正解率を計算する．  
   
+  
 ### 検索例  
 + クエリスケッチの例1  
  <img src="https://github.com/La4La/Color-Sketch-Based-Illustration-Retrieval-Using-CNN/blob/master/user_query/origin_query/userquery01/01.jpg" width="100px">  
